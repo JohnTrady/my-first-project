@@ -1,0 +1,76 @@
+
+@font-face {
+    font-family: "Manrope";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Manrope"),
+         url(../fonts/Manrope-Regular.woff2) format("woff2"),
+         url(../fonts/Manrope-Regular.woff) format("woff");
+         
+         
+}
+
+@font-face { 
+    font-family: "Manrope";
+    font-family: 600;
+    font-style: normal;
+    src: local("Manrope"),
+          url(../fonts/Manrope-Semibold.woff2) format("woff2"),
+          url(../fonts/Manrope-Semibold.woff) format("woff");
+          
+         
+}
+
+@font-face {
+    font-family: "Manrope";
+    font-weight: 700;
+    font-style: normal;
+    src: local("Manrope"),
+         url(../fonts/Manrope-Bold.woff2) format("woff2"),
+         url(../fonts/Manrope-Bold.woff) format("woff");
+        
+         
+}
+
+
+@font-face {
+    font-family: "Manrope";
+    font-weight: 800;
+    font-style: normal;
+    src: local("Manrope"),
+         url(../fonts/Manrope-ExtraBold.woff2) format("woff2"),
+         url(../fonts/Manrope-ExtraBold.woff) format("woff");
+        
+         
+}
+
+
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Fira Sans"),
+         url(../fonts/FiraSans.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: 500;
+    font-style: normal;
+    src: local("Fira Sans"),
+         url(../fonts/FiraSansMedium.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: 600;
+    font-style: normal;
+    src: local("Fira Sans"),
+         url(../fonts/FiraSans-Bold.woff) format("woff");
+}
+
+
+
+
+
+
