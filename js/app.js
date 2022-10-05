@@ -35,3 +35,22 @@
 
 // console.log(sumOFSquares(2, 3));
 
+/*------------------------------*/
+
+
+// функция нахождения абсолютного значения в js //
+
+const absoluteNumber = num => {
+   if (num > 0) {
+    return num;
+   } else if (num < 0) {
+    return -num;
+   } else {
+    return 0;
+   }
+
+   
+};
+
+// другие выражения которые дают true или false  ===, !==, <, >, <=, >=, 
+  
