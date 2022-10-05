@@ -31,5 +31,7 @@
 
 // get clone src
 
+// const sumOFSquares = (a, b) => (a**2) + (2* a * b) + (b**2);
 
+// console.log(sumOFSquares(2, 3));
 
