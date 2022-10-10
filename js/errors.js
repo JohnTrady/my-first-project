@@ -38,3 +38,11 @@
 //     at Function.Module._load (node:internal/modules/cjs/loader:839:12)
 //     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
 //     at node:internal/main/run_main_module:17:47
+
+// логическая ошибка 
+//  напишем функцию которая конвертирует градусы по Фаренгейту в грудусы по Цельсию
+const fahrenheitToCelSius = (fahr) => {
+    return (fahr - 32) * 5 / 9;
+ };
+
+console.log(fahrenheitToCelSius(50));
