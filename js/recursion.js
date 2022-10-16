@@ -139,24 +139,24 @@
 // интеративный процесс 
 //   вся информвция о вычислении называется состоянием
 
-const factorial = n => {
-    if (n === 0) {
-       return 1;
-    }
+// const factorial = n => {
+//     if (n === 0) {
+//        return 1; 
+//     }
    
- const iter = (counter , accumulator) => {
-     if (counter === 1) {
-       return accumulator;
-     }
+//  const iter = (counter , accumulator) => {
+//      if (counter === 1) {
+//        return accumulator;
+//      }
 
-      return iter(counter -1, counter * accumulator);
- };
+//       return iter(counter -1, counter * accumulator);
+//  };
   
-      return iter(n,1);
+//       return iter(n,1);
   
-};
+// };
 
- console.log(factorial(6));
+//  console.log(factorial(0));
 
 
 // counter - остлеживает изменение от n до 1
@@ -168,10 +168,45 @@ const factorial = n => {
 
 
 // интеративный процесс может быть описан так :
-//   1) определить ничальное состояние , в нашем случае мы делаем вызов iter(n,1);
+//   1) определить начальное состояние , в нашем случае мы делаем вызов iter(n,1);
 //   2) проверить терминальный сценарий , мы проверяем ,  counter === 1 , останавливаем рекурсию когда  он  принимает значение 1 ;
 //   3) определяем новое состояние (это то , как процесс двигается вперед). в нашем случае это return iter(counter -1, counter * accumulator);
 //   4) повторяем шаг 3;
+
+// const smallestDivisor = n => {
+//      if (n <= 0) {
+//        return null
+//      }
+
+//      if (n%2 === 0) {
+//       return 2;
+//   }
+    
+//    const iter = (divider) => {
+      
+
+//      if (n%divider === 0) {
+//           return divider;
+//       }
+
+     
+//        return iter(divider + 1);
+//    };
+
+//     return iter(2);
+
+   
+    
+
+
+// };
+
+// console.log(smallestDivisor(3));
+
+
+
+
+
 
 
  
