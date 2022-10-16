@@ -173,35 +173,35 @@
 //   3) определяем новое состояние (это то , как процесс двигается вперед). в нашем случае это return iter(counter -1, counter * accumulator);
 //   4) повторяем шаг 3;
 
-// const smallestDivisor = n => {
-//      if (n <= 0) {
-//        return null
-//      }
+const smallestDivisor = n => {
+     if (n <= 1) {
+       return "Our devider shoud be > 1"
+     }
 
-//      if (n%2 === 0) {
-//       return 2;
-//   }
+     if (n%2 === 0 && n >= 1) {
+      return 2;
+  }
     
-//    const iter = (divider) => {
+   const iter = (divider) => {
       
 
-//      if (n%divider === 0) {
-//           return divider;
-//       }
+     if (n%divider === 0) {
+          return divider;
+      }
 
      
-//        return iter(divider + 1);
-//    };
+       return iter(divider + 1);
+   };
 
-//     return iter(2);
+    return iter(2);
 
    
     
 
 
-// };
+};
 
-// console.log(smallestDivisor(3));
+console.log(smallestDivisor(15));
 
 
 
