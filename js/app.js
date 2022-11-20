@@ -1224,3 +1224,254 @@
 // };
 
 // console.log(addPrefix(['John','David','Steve','Brain','Kurt'], 'Mr'))
+
+  // Cсылки
+
+//   [1, 2,3] === [1, 2, 3] // false
+
+  // ссылаемся на один и тот же массив 
+//   const items = [1, 2,];
+//   const items2 = items;
+//   items2.push(3);
+
+//   console.log(items) // [1, 2, 3]
+//   console.log(items2) // [1, 2, 3]
+//   console.log(items === items2); // true
+
+  // если  передать в массив какую-нибудь функцию , которая его именяет , то строка тоже изменится 
+
+//   const f = (coll) => coll.push('wow');
+//   const items = ['one'];
+//   f(items);
+//   console.log(items);// [ 'one', 'wow' ]
+//   f(items);
+//   console.log(items); // [ 'one', 'wow', 'wow' ]
+  
+
+//   агрегация - дюбые вычисления , которые строятся на основе  всего набора данных (наприме: min , max , среднего)
+//  напишем функцию поиска максимального значения 
+ 
+// const calculateMax = (coll) => {
+//     if ( coll.length === 0) {
+//         return null;
+//     }
+//     let max = coll[0]; // принимаем за большее значение первый элемент
+//     for (let i = 1; i < coll.length; i++) {
+//         const currentElement = coll[i];
+//         if(currentElement > max) {
+//             max = currentElement;
+//         }
+        
+//     }
+//     return max;
+// };
+
+// console.log(calculateMax([])); // null 
+// console.log(calculateMax([3, 2, -10, 38 ,0])); // 38
+
+//    поиск суммы элементов в массиве
+
+
+// const calculateSum = coll => {
+  
+    
+//     let result = 0
+//     for (let i = 0; i < coll.length; i++) {
+//        result += coll[i];
+       
+        
+//     }
+//     return result;
+// };
+// console.log(calculateSum([]));   // 0
+// console.log(calculateSum([5,5,-6])); // 4
+// console.log(calculateSum([5,5,6])); // 16
+
+
+
+// const sumOfElements = (coll) => {
+//      let result = 0;
+  
+//     for(let i = 0; i < coll.length; i++) {
+//       if (coll[i] % 3 === 0) {
+//         result +=coll[i];
+//       }
+//     }
+//     return result;
+// };
+// console.log(sumOfElements([])); 
+// console.log(sumOfElements([3,6,2,4,21,27,25,62,55,]));
+// console.log(sumOfElements([2,3,5,6,7,8,9,12]));
+
+
+// цикл for ...of  данный цикл не требует счетчика , он знает о том , как перебирать элементы , и когда они закончатся 
+
+// const listOfNames = ['Brain','John','Vasya'];
+
+// for(const name of listOfNames){
+//   console.log(name);
+// };
+
+// данный цикл отлично подходит для задач  агрегации
+
+
+// const calculateSum = coll => {
+//     let result = 0
+//     for (const element of coll ) {
+//        result +=element;
+               
+//     }
+//     return result;
+// };
+
+// console.log(calculateSum([2,3,5,2]))
+
+// const greetings = 'Hello';
+// for(const symbol of greetings){
+//   console.log(symbol);
+// }
+
+// цикла for of будет недостаточно , если вам потребуется ручное управление обходом :
+// for(let i = 0; i < items.length; i +=2) { //  обход элментов массива через один
+//    // какой то код
+// };
+
+// for(let i = items.length -1; i >= 0; i--){ // обход массива в обратном порядке 
+//   // какой то код 
+// };
+
+// for(let i = 5; i < 10;i++) { //   обход массива в определленом диапозоне
+//    // какой то код 
+// };
+
+// for(let i = 0; i < items.length; i +=2) {
+//   // items[i] = что то делаем   // когда во время обходо  необходитио менять исходный массив
+// } ;
+
+// const caculateAverage = tempreatures => {
+//   if (tempreatures.length ===0) {
+//     return null;
+//   }
+//   let result =0;
+//     for(let i = 0; i < tempreatures.length; i++) {
+//       result += tempreatures[i] / tempreatures.length;
+//     }
+//     return result;
+// };
+
+// const caculateAverage = tempreatures => {
+//   if (tempreatures.length ===0) {
+//     return null;
+//   }
+//   let result =0;
+//     for(const value of tempreatures) {
+//       result += value / tempreatures.length;
+//     }
+//     return result;
+// };
+
+
+// console.log(caculateAverage([37.5, 34, 39.3, 40, 38.7, 41.5])); // 38.5
+// console.log(caculateAverage([])); // null
+// console.log(caculateAverage([37.5, 34, -39.3, 40, 38.7, -41.5]));  // 11.5666666
+
+//метод splice 
+
+// const animals = ['cats', 'dogs', 'birds'];
+// // animals.splice(1, 0, 'horses'); //  добавляем элемент по индксу (1 - с какого индекса, 0 - количесвто элементов удалено);
+// // animals.splice(1, 1, 'horses'); // замеянем элемент ((1 - с какого индекса, 1 - количесвто элементов удалено);
+// animals.splice(1, 1,);  // удвляем элемент  ((1 - с какого индекса, 1 - количесвто элементов удалено);
+//  animals.splice(1);
+//  console.log(animals);
+
+
+// удаление null из массива
+// const compact = coll => {
+//   // создание результирующего массива 
+//   const result =[];
+//   for(let i = 0; i < coll.length; i++) {
+//     if(coll[i] !== null){
+//       result.push(coll[i]);
+     
+//     }
+//   }
+//   return result;
+// }
+
+// const compact = coll => {
+//     // создание результирующего массива , в который  добавляются только подходящие под условия значения
+//     const result =[];
+//     for(const item of coll) {
+//       if(item !== null){
+//         result.push(item);
+       
+//       }
+//     }
+//     return result;
+// }
+
+// console.log(compact(([0, 1, false, null, 'wow', null]))); // [0, 1, false,'wow']
+// console.log(compact(([]))); // []
+
+
+// управляющие инструкции 
+// break - производит выход из цикла
+
+// const coll = ['one', 'two', 'three', 'four', 'stop', 'five'];
+// for(const item of coll) {
+//   if (item === 'stop') {
+//     break;
+//   }
+//   console.log(item);
+// }
+
+// continue - позоляет пропустить итерацию цикла 
+
+// const coll = ['one', 'two', 'three', null, 'four', null, 'five'];
+// const myCompact = coll => {
+//      const result = [];
+//     for ( const item of coll) {
+//       if (item === null) {
+//            continue;
+//       }
+//       result.push(item);
+
+//     }
+//    return result
+// }
+
+// console.log(myCompact(coll));
+
+
+// сортировка массивов
+
+//  const numbers = [4, 20, 3, 56, 10,8];
+
+//  numbers.sort((a, b) => a - b); // сортировка по возрастанию
+//  console.log(numbers); 
+ 
+//  numbers.reverse(); //  сортировка в обратном порядке 
+//  console.log(numbers); 
+ 
+// пузырковая сортировка
+
+// const bubbleSort = coll => {
+//      let stepsCount = coll.length;
+//      let swapped; // показывает был ли совершен обмен  элементов во время перебора массива 
+//      // цикл do ... while, разница от цикла while только в проверке (здесь она делается не до выполнения тела , а  после )
+//      do {
+//          swapped = false;
+//          for(let i = 0; i <  stepsCount; i++ ) {
+//             if (coll[i] > coll[i + 1]) {
+//                 const temp = coll[i]; // это константа для хранение текущего элемента
+//                 coll[i] = coll[i + 1];
+//                 coll[i +1] = temp;
+//                 swapped = true;
+//             }
+//          }
+//          stepsCount -= 1;
+//      }  while (swapped); //  продолжаем наши перестановки пока swapped === true
+//      return coll
+
+// };
+// console.log(bubbleSort([4, 20, 3, 56, 10,8])); 
