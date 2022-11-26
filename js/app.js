@@ -1456,7 +1456,7 @@
 // пузырковая сортировка
 
 // const bubbleSort = coll => {
-//      let stepsCount = coll.length;
+//      let stepsCount = coll.length-1;
 //      let swapped; // показывает был ли совершен обмен  элементов во время перебора массива 
 //      // цикл do ... while, разница от цикла while только в проверке (здесь она делается не до выполнения тела , а  после )
 //      do {
@@ -1468,10 +1468,41 @@
 //                 coll[i +1] = temp;
 //                 swapped = true;
 //             }
-//          }
+//           }
 //          stepsCount -= 1;
 //      }  while (swapped); //  продолжаем наши перестановки пока swapped === true
 //      return coll
 
 // };
 // console.log(bubbleSort([4, 20, 3, 56, 10,8])); 
+
+// сортировка выбором 
+
+// const selectionSort = coll => {
+//    for(let i = 0; i < coll.length -1; i++) {
+//       let min = i;
+//        for(let j = i + 1; j < coll.length; j ++ ) {
+//           if(coll[j] < coll[min]) {
+//              min = j;
+//           }
+//        }
+//        const temp = coll[i];
+//        coll[i] = coll[min];
+//        coll[min] = temp;
+
+//    }
+//    return coll;
+// };
+// console.log(selectionSort([4, 20, 3, 56, 10,8])); 
+
+
+
+
+
+
+
+
+
+
+
+
