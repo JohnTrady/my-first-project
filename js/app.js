@@ -1456,7 +1456,7 @@
 // пузырковая сортировка
 
 // const bubbleSort = coll => {
-//      let stepsCount = coll.length-1;
+//      let stepsCount = coll.length;
 //      let swapped; // показывает был ли совершен обмен  элементов во время перебора массива 
 //      // цикл do ... while, разница от цикла while только в проверке (здесь она делается не до выполнения тела , а  после )
 //      do {
@@ -1468,7 +1468,7 @@
 //                 coll[i +1] = temp;
 //                 swapped = true;
 //             }
-//           }
+//          }
 //          stepsCount -= 1;
 //      }  while (swapped); //  продолжаем наши перестановки пока swapped === true
 //      return coll
@@ -1495,6 +1495,171 @@
 // };
 // console.log(selectionSort([4, 20, 3, 56, 10,8])); 
 
+
+
+// Стек - это упорядочное коллекция элементов , в которой добавление новых и удаление старых элементов всегда происходит в конце коллекции. Обычно это называют вершиной стека 
+// структура данных - это кокретный способ хранение и ораганизации данных
+// структуры данных:    списки, хеш-таблицы, деревья, графы, стек, очередь
+
+// работа со стеком включает в себя следующие операции 
+// push - добавить в стек 
+// pop - взять из стека 
+// peekBack - вернуть элемент с вершины стека
+// isEmpty - проверка на пустоту 
+// size - вернуть размер 
+
+
+// const checkIsBalanced = expression => {
+//     // создаем стэк
+//     const stack = [];
+//     // проходим по каждому символу в строке 
+//     for (const symbol of expression) {
+//         if ( symbol ==='(') {
+//             stack.push(symbol);
+//         } else if (symbol === ')') {
+//              if(!stack.pop()) {
+//                 return false;
+//              }
+//         }
+
+// }
+//   return stack.length === 0;f
+// };
+
+
+// console.log(checkIsBalanced("(()"))
+
+// деструктуризация - синтактическая возможность раскладавать элементы массива (и не только) в отдельные константы и переменные
+
+// const points = [3,5];
+// const [x, y] = points;//[x,y] = [3,5] ult x = 3 , y = 5;
+// console.log(`${x}:${y}`);
+
+// const [, secondElement, , fourthElement, fifthElement] = [1,2,3,4,5];
+// console.log(secondElement); // 2 
+// console.log(fourthElement); // 4
+// console.log(fifthElement); // 5
+
+// const [firstElement, secondElement , thirdElement] = [1 ,2];
+// console.log(thirdElement); // undefined 
+
+// const [firstElement, secondElement , thirdElement = 3] = [1 ,2];
+// console.log(thirdElement); // 3
+
+// деструктуризация в циклах 
+
+// const points = [
+//    [2,3],
+//    [4,5],
+// ];
+
+// for (const [x,y] of points) {
+//   console.log([x,y]);
+// };
+
+// деструктуризация строк 
+
+// const [first, second, third] = 'one';
+// console.log(first);
+// console.log(second);
+// console.log(third);
+
+// rest опереатор и деструктуризация 
+
+// rest оператор позволяет свернуть часть элементов  во время деструктуризации
+
+// const fruits = ['apple', ' orange', ' banana', 'pineapple'];
+
+// const [firstElement, ...rest] = fruits;
+// console.log(firstElement);
+// console.log(rest);
+
+// в ситуациях когда вас интересует только часть массива  , но не важны первые элементы , лучше воспользоваться методом slice()
+
+// const fruits = ['apple', ' orange', ' banana', 'pineapple'];
+// const rest = fruits.slice(1); // метод slice возвращает новый массив , а не изменяет старый 
+// console.log(rest);
+
+// const [first, second, ...rest] = 'some string';
+// console.log(first);
+// console.log(second);
+// console.log(rest); // rest выводит массив данных
+
+ // spread опертор и создание новых масивов 
+ // spread - растягивает элементы 
+
+//  const russianCities = ['Moscow', 'Kazan'];
+//  const cities = ['Milan', 'Rome', ... russianCities]; // spread появляется справа от равенста
+//const cities = ['Milan', ... russianCities, 'Rome' ]; //[ 'Milan', 'Moscow', 'Kazan', 'Rome' ]spread может появлятся в любой части массива
+//  console.log(cities); // [ 'Milan', 'Rome', 'Moscow', 'Kazan' ]
+
+// копирование массива 
+
+// const russianCities = ['Moscow', 'Kazan'];
+// const copy = [...russianCities]; 
+// copy.push('Samara')
+// console.log(russianCities); // [ 'Moscow', 'Kazan' ]
+// console.log(copy); // [ 'Moscow', 'Kazan', 'Samara' ]
+
+// тоже самое юез spread
+
+// const russianCities = ['Moscow', 'Kazan'];
+// const copy = russianCities.slice();
+// copy.push('Samara');
+//  console.log(russianCities); // [ 'Moscow', 'Kazan' ]
+//  console.log(copy); // [ 'Moscow', 'Kazan', 'Samara' ]
+
+
+// const x = 'moscow';
+// console.log(x.slice(3));
+
+
+// const money1 = ['eur 10', 'usd 1', 'usd 10', 'rub 50', 'usd 5'];
+// const money2 = ['eur 10', 'usd 1', 'eur 5', 'rub 100', 'eur 20', 'eur 100', 'rub 200']
+// const money3 = ['eur 10', 'rub 50', 'eur 5', 'rub 10', 'rub 10', 'eur 100', 'rub 200']
+
+// getTotalAmount = (money, currency) => {
+//   let result = 0;
+    
+//   for(const temp of money){
+//      if (temp.slice(0,3) === currency) {
+//       result += Number(temp.slice(4));
+//     }
+//   }
+
+//   return result; 
+// };
+// console.log(getTotalAmount(money1, 'usd'));
+// console.log(getTotalAmount(money2, 'eur'));
+// console.log(getTotalAmount(money3, 'rub'));
+
+
+// getTotalAmount = (money, currency) => {
+//   let result = 0;
+//   for(const temp of money) {
+//       const parts = temp.split(' ') ;
+//       if (parts[0] === currency) {
+//          result += Number(parts[1]);
+//       }
+//   }
+//   return result
+// }
+
+
+// getTotalAmount = (money, currency) => {
+//   let result = 0;
+//   for(const part of money) {
+//       const [cur, value] = part.split(' ');
+//       if (cur === currency) {
+//          result += Number(value);
+//       }
+//   }
+//   return result
+// }
+
+// console.log(getTotalAmount(money1, 'usd'));
+// console.log(getTotalAmount(money2, 'eur'));
+// console.log(getTotalAmount(money3, 'rub'));
 
 
 
