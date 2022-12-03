@@ -1659,7 +1659,7 @@
 
 // console.log(getTotalAmount(money1, 'usd'));
 // console.log(getTotalAmount(money2, 'eur'));
-// console.log(getTotalAmount(money3, 'rub'));
+// console.log(getTotalAmount(money3, 'rub'));;
 
 
 
