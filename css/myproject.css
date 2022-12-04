@@ -1,0 +1,117 @@
+    /* Task 4 */
+
+
+/* .navbar {
+    font-size: 25px;
+    background-color: #cac7c7;
+    padding: 15px 0px;
+}
+
+.container {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    color: white;
+    background-color: rgb(10, 79, 10);
+    padding: 15px 0px;
+}
+
+th {
+   padding: 0px 150px;
+
+}
+
+td {
+    background-color: bisque;
+    color: black;
+   
+} */
+
+
+
+ /* Task 5*/ 
+
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+.wrapper {
+   background-color: rgb(34, 33, 33);
+   width: 500px;
+   margin:  auto;
+   border-radius: 15px;
+   overflow: hidden;
+   margin-top: 250px;
+  
+
+}
+
+ .navbar {
+    display: flex;
+    justify-content: center;
+    min-height: 110px;
+    
+   
+}
+.nav-brand {
+    font-size: 35px;
+    color: aqua;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    
+
+}
+
+.label {
+    font-size: 25px;
+}
+
+.body-input {
+    display: flex;
+    align-items: stretch;
+    gap: 25px;
+    
+}
+.input {
+    width: 80px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+   
+}
+
+.input::placeholder {
+    font-size: 15px;
+}
+
+
+
+.input:focus {
+    outline: 3px solid aqua;
+}
+.text {
+    font-size:  20px;
+}
+
+.next-age {
+    color: aqua;
+    font-size:  25px;
+} */
+
+
+/* Tesk 7 */
+
+
