@@ -320,3 +320,140 @@
     
 
 // }
+
+
+//  Task 8 Get Email
+
+// import { getEmail } from './application.js';
+
+// const inputEmail = document.querySelector('#input-email');
+// const output = document.querySelector('#output');
+
+// inputEmail.addEventListener('input', event =>{
+//   let result = getEmail(inputEmail.value);
+//   output.textContent = result + ' is your email';
+//   console.log(result);
+
+// })
+
+// ==================
+
+// const settings =  {
+//   theme: 'Dark',
+//   version: '2.4.1',
+//   beta:false
+
+// };
+
+// const keys = Object.keys(settings);
+// console.log(keys);
+// keys.forEach(key => {
+//   console.log(settings[key]);
+// });
+
+
+
+
+
+//==========================
+
+
+// Task - 9 Course Detail 
+
+
+//  const course = {
+//   id: 1,
+//   name: 'Learn JavaScript',
+//   year: 2022
+//  };
+
+// const getCourseDeatail = (course, detail)  => {
+  
+
+//    const keys = Object.keys(course);
+   
+//    for (const key of keys) {
+//     if (detail === key) {
+//       return `The course ${key} is ${course[key]}`;
+//     }
+//    }
+ 
+
+// };
+
+
+// const getCourseDeatail = (course, detail)  =>  {
+//   if(course[detail] === undefined) {
+//     return 'Wrong detail'
+//   }
+//   return `The course ${detail} is   ${course[detail]}`
+// };
+
+
+
+// console.log(getCourseDeatail({id: 1,name: 'Learn JavaScript',year: 2022},'name' )); // The course name is Learn JavaScript
+// console.log(getCourseDeatail({id: 1,name: 'Learn JavaScript',year: 2022},'year' )); // The course year is 2022
+// console.log(getCourseDeatail({id: 1,name: 'Learn JavaScript',year: 2022},'id' ));  // The course id is 1
+// console.log(getCourseDeatail(course,'name' ));  // The course name is Learn JavaScript
+
+
+
+// Task - 10 Count Properties
+
+// const getCountProperties = course  => {
+//   const props = Object.keys(course);
+//   return props.length
+// }
+
+// console.log(getCountProperties({id: 1,name: 'Learn JavaScript',year: 2022}));// 3
+// console.log(getCountProperties({})); // 0
+
+
+
+// Task - 11 Upper Case Properties
+
+// const getUpperCaseProps =  course =>  {
+//     let result = [];
+//     const props = Object.keys(course);
+//     for(const prop of props) {
+//         result.push(prop.toUpperCase());
+//     };
+
+//     return result;
+
+    
+// };
+
+
+// const getUpperCaseProps =  course =>  {
+    
+//   return Object.keys(course).map(prop => prop.toUpperCase()); 
+  
+    
+// };
+
+
+
+// console.log(getUpperCaseProps({id: 1,name: 'Learn JavaScript',year: 2022}));  // [ 'ID', 'NAME', 'YEAR' ]
+
+ // Task - 12 Log Values
+
+//  const logValues = course => {
+//   const props = Object.keys(course);
+//   return console.log(props.join(', '));
+
+//  };
+
+//  logValues({id: 1,name: 'Learn JavaScript',year: 2022})
+
+//  Task - 12  Simple Translation
+
+import {getTranslation} from './application.js';
+
+const dropdown = document.querySelector('#countries');
+const output = document.querySelector('#output');
+
+dropdown.addEventListener("change", () =>{
+  output.textContent = getTranslation(dropdown.value);
+});
+
