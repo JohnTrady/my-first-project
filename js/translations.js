@@ -1,11 +1,11 @@
 'use strict'
 
-const translations = {
-    welcome: {
-        dutch: 'Welkom',
-        french: 'Bienvenue',
-        english: 'Welcome'
-    }
-};
+// const translations = {
+//     welcome: {
+//         dutch: 'Welkom',
+//         french: 'Bienvenue',
+//         english: 'Welcome'
+//     }
+// };
 
-export default translations;
+// export default translations;

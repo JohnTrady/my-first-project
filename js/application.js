@@ -67,13 +67,13 @@
 //  Task 8 Get Email
 
 
-import  translations from "./translations.js";
+// import  translations from "./translations.js";
 
 
-export const getTranslation = (language) => {
-    console.log(translations);
-    console.log(language);
-     return translations.welcome[language];
-};
+// export const getTranslation = (language) => {
+//     console.log(translations);
+//     console.log(language);
+//      return translations.welcome[language];
+// };
 
 

@@ -448,12 +448,32 @@
 
 //  Task - 12  Simple Translation
 
-import {getTranslation} from './application.js';
+// const translations = {
+//     welcome: {
+//         dutch: 'Welkom',
+//         french: 'Bienvenue',
+//         english: 'Welcome'
+//     }
+// };
 
-const dropdown = document.querySelector('#countries');
-const output = document.querySelector('#output');
+// export default translations;
 
-dropdown.addEventListener("change", () =>{
-  output.textContent = getTranslation(dropdown.value);
-});
+
+// import  translations from "./translations.js";
+
+
+// export const getTranslation = (language) => {
+//     console.log(translations);
+//     console.log(language);
+//      return translations.welcome[language];
+// };
+
+// import {getTranslation} from './application.js';
+
+// const dropdown = document.querySelector('#countries');
+// const output = document.querySelector('#output');
+
+// dropdown.addEventListener("change", () =>{
+//   output.textContent = getTranslation(dropdown.value);
+// });
 
