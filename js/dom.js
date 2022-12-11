@@ -90,7 +90,7 @@
 // const el = document.getElementById('myElement');
 
 // el.addEventListener('click', (e)=>{
-//     e.preventDefault(); // если этого не сделать , браузер авполнит загрузку новой страницы
+//     e.preventDefault(); // если этого не сделать , браузер авполнит загрузку новой 
 //     alert(e.target.textContent);
 // })
 
