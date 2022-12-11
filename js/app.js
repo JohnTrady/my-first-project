@@ -1985,6 +1985,258 @@
 // }
 
 
+//  Task 8 Get Email
+
+// import { getEmail } from './application.js';
+
+// const inputEmail = document.querySelector('#input-email');
+// const output = document.querySelector('#output');
+
+// inputEmail.addEventListener('input', event =>{
+//   let result = getEmail(inputEmail.value);
+//   output.textContent = result + ' is your email';
+//   console.log(result);
+
+// })
+
+// ==================
+
+// const settings =  {
+//   theme: 'Dark',
+//   version: '2.4.1',
+//   beta:false
+
+// };
+
+// const keys = Object.keys(settings);
+// console.log(keys);
+// keys.forEach(key => {
+//   console.log(settings[key]);
+// });
+
+
+
+
+
+//==========================
+
+
+// Task - 9 Course Detail 
+
+
+//  const course = {
+//   id: 1,
+//   name: 'Learn JavaScript',
+//   year: 2022
+//  };
+
+// const getCourseDeatail = (course, detail)  => {
+  
+
+//    const keys = Object.keys(course);
+   
+//    for (const key of keys) {
+//     if (detail === key) {
+//       return `The course ${key} is ${course[key]}`;
+//     }
+//    }
+ 
+
+// };
+
+
+// const getCourseDeatail = (course, detail)  =>  {
+//   if(course[detail] === undefined) {
+//     return 'Wrong detail'
+//   }
+//   return `The course ${detail} is   ${course[detail]}`
+// };
+
+
+
+// console.log(getCourseDeatail({id: 1,name: 'Learn JavaScript',year: 2022},'name' )); // The course name is Learn JavaScript
+// console.log(getCourseDeatail({id: 1,name: 'Learn JavaScript',year: 2022},'year' )); // The course year is 2022
+// console.log(getCourseDeatail({id: 1,name: 'Learn JavaScript',year: 2022},'id' ));  // The course id is 1
+// console.log(getCourseDeatail(course,'name' ));  // The course name is Learn JavaScript
+
+
+
+// Task - 10 Count Properties
+
+// const getCountProperties = course  => {
+//   const props = Object.keys(course);
+//   return props.length
+// }
+
+// console.log(getCountProperties({id: 1,name: 'Learn JavaScript',year: 2022}));// 3
+// console.log(getCountProperties({})); // 0
+
+
+
+// Task - 11 Upper Case Properties
+
+// const getUpperCaseProps =  course =>  {
+//     let result = [];
+//     const props = Object.keys(course);
+//     for(const prop of props) {
+//         result.push(prop.toUpperCase());
+//     };
+
+//     return result;
+
+    
+// };
+
+
+// const getUpperCaseProps =  course =>  {
+    
+//   return Object.keys(course).map(prop => prop.toUpperCase()); 
+  
+    
+// };
+
+
+
+// console.log(getUpperCaseProps({id: 1,name: 'Learn JavaScript',year: 2022}));  // [ 'ID', 'NAME', 'YEAR' ]
+
+ // Task - 12 Log Values
+
+//  const logValues = course => {
+//   const props = Object.keys(course);
+//   return console.log(props.join(', '));
+
+//  };
+
+//  logValues({id: 1,name: 'Learn JavaScript',year: 2022})
+
+//  Task - 12  Simple Translation
+
+// const translations = {
+//     welcome: {
+//         dutch: 'Welkom',
+//         french: 'Bienvenue',
+//         english: 'Welcome'
+//     }
+// };
+
+// export default translations;
+
+
+// import  translations from "./translations.js";
+
+
+// export const getTranslation = (language) => {
+//     console.log(translations);
+//     console.log(language);
+//      return translations.welcome[language];
+// };
+
+// import {getTranslation} from './application.js';
+
+// const dropdown = document.querySelector('#countries');
+// const output = document.querySelector('#output');
+
+// dropdown.addEventListener("change", () =>{
+//   output.textContent = getTranslation(dropdown.value);
+// });
+
+// поиск по id всегда возращает 1 элемент
+// const el = document.getElementById('content');
+// console.log(el);
+
+// если нам нужна обработка нескольких элементов , подойдет поиск по классу 
+// const collection = document.getElementsByClassName('content');
+// console.log(collection);
+
+// поиск элемента по тегу 
+// const paragraph  = document.getElementsByTagName('paragraph');
+// console.log(paragraph);
+
+//поиск всех элемнтов
+// const all = document.getElementsByTagName('*')
+
+// поиск по селектору 
+// найти элемент с id ul 
+// const ul = document.querySelector('#menu');
+// console.log(ul);
+
+// const spans = ul.querySelectorAll('.odd > span');
+// console.log(spans);
+
+// matches - прежикато  проверяетб удовлетворяет ли el селектору css
+
+
+// const el = document.querySelector('p');
+// el.matches('unknown-closs'); // false
+// el.matches('font-weigt');  // true
+
+// closest - тщет ближайший элемент по иерархии , удовлетворя.щий селектору 
+
+// const el = document.querySelector('span');
+// const item = el.closest('.row');
+// console.log(item.id); // three
+
+//  атрибуиты. когда браузер загрузил HTML код , на его основе строится DOM, во время обработки, каждый тег  становится узлов , атрибуты свойствами этого узла 
+
+// const el =document.querySelector('#aboutPage');
+// el.id; // aboutPage
+// el.href; // /pages/about
+
+// добавление/удвление класса 
+
+// const el =document.querySelector('#aboutPage');
+// el.classList.add('dimple');// добавили класс
+// el.classList.remove('simple'); // удвлили класс
+// console.log(el);
+// el.classList.remove('class'); // добавляет класс если его нет , и удаялет класс если он  есть 
+
+// события 
+
+// const getBoom = () => alert('BooM');
+
+//   обращение через свойства элемента в DOM
+
+// const button = document.getElementById('button');
+// button.onclick = () => alert('BooM');
+
+// несколько обработчиков на один элемент 
+
+// const button = document.getElementById('button');
+
+// button.addEventListener('click', ()=>{
+//     alert('BooM');
+ 
+    
+// });
+// добавляем еще один обработчик
+// button.addEventListener('click', () =>{alert('Boom2')})
+
+// удаление обработчика 
+// button.removeEventListener('click', handler);
+
+// Объект событий
+
+// const button = document.getElementById('button');
+
+// button.addEventListener('click', (e) => {
+// // координаты точки , в которой произошел клик 
+//   console.log(e.clientX);
+
+//   console.log(e.clientY);
+// });
+
+// действия по-умолчанию 
+
+// const el = document.getElementById('myElement');
+
+// el.addEventListener('click', (e)=>{
+//     e.preventDefault(); // если этого не сделать , браузер авполнит загрузку новой страницы
+//     alert(e.target.textContent);
+// })
+
+
+
+
 
 
 
